@@ -1,0 +1,22 @@
+ALGORITHM first_exo
+VAR
+cpt_mots:INTEGER:=0;
+cpt_voy:INTEGER:=0;
+tab : ARRAY_OF CHAR[100];
+phrase :STRING;
+
+BEGIN
+
+    tab:=["h","e","l","l","o"," ","w","o","r","l","d","."];
+
+    FOR i FROM 0 TO tab.length-1 STEP 1  DO
+        IF (tab[i]==" ") THEN
+            cpt_mots:=cpt_mots+1;
+        END_IF
+        IF (tab[i]=="a" OR tab[i]=="o" OR tab[i]=="u" OR tab[i]=="e" OR  tab[i]=="y" OR  tab[i]=="i" ) THEN
+        cpt_voy:=cpt_voy+1;
+        END_IF
+    END_FOR
+    cpt_mots:=cpt_mots+1;
+END
+
